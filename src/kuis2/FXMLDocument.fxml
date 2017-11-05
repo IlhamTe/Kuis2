@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="836.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kuis2.FXMLDocumentController">
+   <children>
+      <Pane layoutY="63.0" prefHeight="408.0" prefWidth="321.0" style="-fx-background-color: yellow;">
+         <children>
+            <JFXButton fx:id="simpan" layoutX="33.0" layoutY="216.0" onAction="#tekanSimpan" style="-fx-background-color: white;" text="SIMPAN">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="bersihkan" layoutX="33.0" layoutY="251.0" onAction="#tekanBersihkan" style="-fx-background-color: white;" text="BERSIHKAN">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="hapus" layoutX="129.0" layoutY="251.0" onAction="#tekanHapus" prefHeight="25.0" prefWidth="153.0" style="-fx-background-color: white;" text="HAPUS KESELURUHAN">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="keluar" layoutX="129.0" layoutY="216.0" onAction="#tekanKeluar" prefHeight="25.0" prefWidth="63.0" style="-fx-background-color: white;" text="KELUAR">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></JFXButton>
+         </children>
+      </Pane>
+      <GridPane layoutX="8.0" layoutY="70.0" prefHeight="188.0" prefWidth="282.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="137.0" minWidth="10.0" prefWidth="93.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="191.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Kode Barang">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Nama Barang" GridPane.rowIndex="1">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Kategori" GridPane.rowIndex="2">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Jenis Packaging" GridPane.rowIndex="3">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label text="Harga" GridPane.rowIndex="4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="namab" prefHeight="32.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="harga" prefHeight="32.0" prefWidth="170.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <JFXTextField fx:id="kodeb" GridPane.columnIndex="1" />
+            <JFXComboBox fx:id="kategori" prefHeight="25.0" prefWidth="185.0" promptText="Pilih Kategori" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <JFXComboBox fx:id="jenis" prefHeight="33.0" prefWidth="188.0" promptText="Pilih Jenis Packaging" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <Pane layoutX="321.0" layoutY="63.0" prefHeight="408.0" prefWidth="516.0" style="-fx-background-color: green;">
+         <children>
+            <GridPane layoutX="20.0" layoutY="60.0" prefHeight="280.0" prefWidth="472.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="95.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="129.0" minHeight="6.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="160.0" minHeight="10.0" prefHeight="126.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="96.0" style="-fx-background-color: grey;" text="Kode " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: grey;" text="Nama Barang" textFill="WHITE" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: grey;" text="Jenis" textFill="WHITE" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: grey;" text="Kategori" textFill="WHITE" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: grey;" text="Harga" textFill="WHITE" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="kode3" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.rowIndex="3" />
+                  <Label fx:id="kode1" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.rowIndex="1" />
+                  <Label fx:id="kode4" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.rowIndex="4" />
+                  <Label fx:id="kode2" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.rowIndex="2" />
+                  <Label fx:id="nama1" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="nama2" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="nama3" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="nama4" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="jenis1" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="jenis2" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="jenis3" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="jenis4" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label fx:id="kategori1" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <Label fx:id="kategori2" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <Label fx:id="kategori3" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Label fx:id="kategori4" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Label fx:id="harga1" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                  <Label fx:id="harga2" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                  <Label fx:id="harga3" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                  <Label fx:id="harga4" alignment="CENTER" prefHeight="25.0" prefWidth="84.0" textFill="WHITE" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                  <Label alignment="CENTER" prefHeight="27.0" prefWidth="85.0" style="-fx-background-color: grey;" text="Ket" textFill="WHITE" GridPane.columnIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="hapus1" mnemonicParsing="false" onAction="#tekanHapus1" text="Hapus" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <Button fx:id="hapus2" mnemonicParsing="false" onAction="#tekanHapus2" text="Hapus" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                  <Button fx:id="hapus3" mnemonicParsing="false" onAction="#tekanHapus3" text="Hapus" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                  <Button fx:id="hapus4" mnemonicParsing="false" onAction="#tekanHapus4" text="Hapus" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+               </children>
+            </GridPane>
+         </children>
+      </Pane>
+      <Label layoutX="279.0" layoutY="23.0" text="DATA INVESTASI BARANG">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
